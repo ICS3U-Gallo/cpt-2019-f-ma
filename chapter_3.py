@@ -11,6 +11,8 @@ class Chapter3View(arcade.View):
         arcade.start_render()
         arcade.draw_text("Chapter 3", settings.WIDTH/2, settings.HEIGHT/2,
                          arcade.color.BLACK, font_size=30, anchor_x="center")
+        arcade.draw_text("!! Red Zone !!", settings.WIDTH/2, settings.HEIGHT/3,
+                         arcade.color.RED, font_size=25, anchor_x="center")
 
     def on_key_press(self, key, modifiers):
         self.director.next_view()
