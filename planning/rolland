@@ -1,4 +1,36 @@
 """
-maze 3
+maze 3 **in progress**
+need to figure out:
+key binds
+draw the rest of the maze
+put after the "Chapter3View"
+add sprite and movements
 """
+import arcade
+
+import settings
+
+
+class Chapter3View(arcade.View):
+    def on_show(self):
+        arcade.set_background_color(arcade.color.WHITE)
+
+    def on_draw(self):
+        arcade.start_render()
+        arcade.draw_rectangle_filled(100, 120, 50, 440, arcade.color.BROWN)
+        arcade.draw_rectangle_filled(100, 500, 50, 200, arcade.color.BROWN)
+        arcade.draw_rectangle_filled(200, 500, 170, 50, arcade.color.BROWN)
+        arcade.draw_rectangle_filled(260, 380, 50, 200, arcade.color.BROWN)
+    def on_key_press(self, key, modifiers):
+        self.director.next_view()
+
+
+if __name__ == "__main__":
+    from utils import FakeDirector
+    window = arcade.Window(settings.WIDTH, settings.HEIGHT)
+    my_view = Chapter3View()
+    my_view.director = FakeDirector(close_on_next_view=True)
+    window.show_view(my_view)
+    arcade.run()
+
 
