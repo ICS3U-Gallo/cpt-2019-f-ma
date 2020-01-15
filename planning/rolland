@@ -4,7 +4,8 @@ need to figure out:
 key binds
 draw the rest of the maze
 put after the "Chapter3View"
-add sprite and movements
+add character sprite and coin sprites and movements
+add a level clear condition
 """
 import arcade
 
