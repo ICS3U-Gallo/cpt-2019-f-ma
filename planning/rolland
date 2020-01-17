@@ -1,30 +1,41 @@
 """
-maze 3 **in progress**
-need to figure out:
-key binds
-draw the rest of the maze
-put after the "Chapter3View"
-add character sprite and coin sprites and movements
-add a level clear condition
+maze 3
 """
 import arcade
 
 import settings
 
+SPRITE_SCALING = 0.25
+
+MOVEMENT_SPEED = 3
+
 
 class Chapter3View(arcade.View):
     def on_show(self):
-        arcade.set_background_color(arcade.color.WHITE)
+        arcade.set_background_color(arcade.color.RUBY_RED)
 
     def on_draw(self):
         arcade.start_render()
-        arcade.draw_rectangle_filled(100, 120, 50, 440, arcade.color.BROWN)
-        arcade.draw_rectangle_filled(100, 500, 50, 200, arcade.color.BROWN)
-        arcade.draw_rectangle_filled(200, 500, 170, 50, arcade.color.BROWN)
-        arcade.draw_rectangle_filled(260, 380, 50, 200, arcade.color.BROWN)
+
+        arcade.draw_rectangle_filled(360, 345, 25, 480, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(360, 780, 25, 200, arcade.color.BLACK_BEAN)
+
+        arcade.draw_rectangle_filled(450, 780, 190, 25, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(460, 692, 25, 200, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(550, 692, 25, 200, arcade.color.BLACK_BEAN)
+
+        arcade.draw_rectangle_filled(455, 510, 210, 25, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(750, 510, 210, 25, arcade.color.BLACK_BEAN)
+
+        #box with gem
+        arcade.draw_rectangle_filled(630, 410, 250, 25, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(518, 345, 25, 120, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(743, 345, 25, 120, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(555, 290, 100, 25, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(705, 290, 100, 25, arcade.color.BLACK_BEAN)
+
     def on_key_press(self, key, modifiers):
         self.director.next_view()
-
 
 if __name__ == "__main__":
     from utils import FakeDirector
@@ -33,5 +44,3 @@ if __name__ == "__main__":
     my_view.director = FakeDirector(close_on_next_view=True)
     window.show_view(my_view)
     arcade.run()
-
-
