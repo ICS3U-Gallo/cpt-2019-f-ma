@@ -1,3 +1,6 @@
+"""
+maze 3
+"""
 import arcade
 
 import settings
@@ -23,6 +26,10 @@ class Maze3View(arcade.View):
         arcade.draw_rectangle_filled(145, 433, 180, 25, arcade.color.BLACK_BEAN)
         arcade.draw_rectangle_filled(145, 548, 180, 25, arcade.color.BLACK_BEAN)
         arcade.draw_rectangle_filled(68, 490, 25, 140, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(135, 230, 25, 250, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(68, 320, 25, 250, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(20, 630, 210, 25, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(150, 710, 210, 25, arcade.color.BLACK_BEAN)
 
         arcade.draw_rectangle_filled(500, 780, 300, 25, arcade.color.BLACK_BEAN)
         arcade.draw_rectangle_filled(460, 692, 25, 200, arcade.color.BLACK_BEAN)
