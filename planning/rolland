@@ -7,7 +7,7 @@ SPRITE_SCALING = 0.25
 MOVEMENT_SPEED = 3
 
 
-class Chapter3View(arcade.View):
+class Maze3View(arcade.View):
     def on_show(self):
         arcade.set_background_color(arcade.color.RUBY_RED)
 
@@ -16,15 +16,28 @@ class Chapter3View(arcade.View):
 
         arcade.draw_rectangle_filled(360, 345, 25, 480, arcade.color.BLACK_BEAN)
         arcade.draw_rectangle_filled(360, 780, 25, 200, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(0, 780, 300, 25, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(350, 780, 230, 25, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(248, 660, 25, 250, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(248, 320, 25, 250, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(145, 433, 180, 25, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(145, 548, 180, 25, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(68, 490, 25, 140, arcade.color.BLACK_BEAN)
 
-        arcade.draw_rectangle_filled(450, 780, 190, 25, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(500, 780, 300, 25, arcade.color.BLACK_BEAN)
         arcade.draw_rectangle_filled(460, 692, 25, 200, arcade.color.BLACK_BEAN)
         arcade.draw_rectangle_filled(550, 692, 25, 200, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(960, 780, 400, 25, arcade.color.BLACK_BEAN)
 
         arcade.draw_rectangle_filled(455, 510, 210, 25, arcade.color.BLACK_BEAN)
         arcade.draw_rectangle_filled(750, 510, 210, 25, arcade.color.BLACK_BEAN)
-        arcade.draw_rectangle_filled(750, 600, 25, 210, arcade.color.BLACK_BEAN)
-
+        arcade.draw_rectangle_filled(700, 610, 25, 210, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(700, 890, 25, 150, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(820, 680, 25, 200, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(960, 590, 25, 200, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(1270, 590, 600, 25, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(960, 200, 25, 480, arcade.color.BLACK_BEAN)
+        arcade.draw_rectangle_filled(843, 270, 25, 480, arcade.color.BLACK_BEAN)
         #box with gem
         arcade.draw_rectangle_filled(630, 410, 250, 25, arcade.color.BLACK_BEAN)
         arcade.draw_rectangle_filled(518, 345, 25, 120, arcade.color.BLACK_BEAN)
@@ -32,13 +45,14 @@ class Chapter3View(arcade.View):
         arcade.draw_rectangle_filled(555, 290, 100, 25, arcade.color.BLACK_BEAN)
         arcade.draw_rectangle_filled(705, 290, 100, 25, arcade.color.BLACK_BEAN)
 
+
     def on_key_press(self, key, modifiers):
         self.director.next_view()
 
 if __name__ == "__main__":
     from utils import FakeDirector
     window = arcade.Window(settings.WIDTH, settings.HEIGHT)
-    my_view = Chapter3View()
+    my_view = Maze3View()
     my_view.director = FakeDirector(close_on_next_view=True)
     window.show_view(my_view)
     arcade.run()
