@@ -2,7 +2,7 @@
 maze 3
 """
 import arcade
-
+import movement_2
 import settings
 
 SPRITE_SCALING = 0.25
