@@ -9,9 +9,9 @@ class Chapter2View(arcade.View):
 
     def on_draw(self):
         arcade.start_render()
-        arcade.draw_rectangle_filled(640, 20, 1280, 50, arcade.color.OCEAN_BOAT_BLUE)
-        arcade.draw_circle_filled(700, 500, 70, arcade.color.SUNGLOW)
-        arcade.draw_rectangle_filled(600, 70, 170, 50, arcade.color.BROWN)
+        arcade.draw_rectangle_filled(640, 165, 1280, 50, arcade.color.OCEAN_BOAT_BLUE)
+        arcade.draw_circle_filled(1000, 600, 70, arcade.color.SUNGLOW)
+        arcade.draw_rectangle_filled(750, 215, 170, 50, arcade.color.BROWN)
         arcade.draw_text("Chapter 2", settings.WIDTH/2, settings.HEIGHT/2,
                          arcade.color.BLACK, font_size=30, anchor_x="center")
         arcade.draw_text("!! Blue Zone !!", settings.WIDTH/2, settings.HEIGHT/3,
