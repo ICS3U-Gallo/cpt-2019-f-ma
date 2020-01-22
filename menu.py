@@ -13,7 +13,7 @@ class MenuView(arcade.View):
         arcade.draw_rectangle_filled(320, 550, 300, 300, arcade.color.GREEN)
         arcade.draw_rectangle_filled(250, 630, 50, 50, arcade.color.RED)
         arcade.draw_rectangle_filled(380, 580, 50, 50, arcade.color.RED)
-        arcade.draw_text("Menu", settings.WIDTH/2, settings.HEIGHT/1.5,
+        arcade.draw_text("The A-Maze-ing Game", settings.WIDTH/2, settings.HEIGHT/1.5,
                          arcade.color.BLACK, font_size=35, anchor_x="center")
         arcade.draw_text("Play", settings.WIDTH/2, settings.HEIGHT/2,       
                          arcade.color.BLACK, font_size=35,  anchor_x="center")
@@ -21,7 +21,8 @@ class MenuView(arcade.View):
                          arcade.color.BLACK, font_size=35,  anchor_x="center")
 
     def on_key_press(self, key, modifiers):
-        self.director.next_view()
+        if key == arcade.key.P:
+            self.director.next_view()
 
 
 if __name__ == "__main__":
