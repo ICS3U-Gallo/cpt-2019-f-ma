@@ -32,3 +32,5 @@ if __name__ == "__main__":
     my_view.director = FakeDirector(close_on_next_view=True)
     window.show_view(my_view)
     arcade.run()
+
+   
