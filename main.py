@@ -6,6 +6,8 @@ from menu import MenuView
 from chapter_1 import Chapter1View
 from chapter_2 import Chapter2View
 from chapter_3 import Chapter3View
+from maze_3 import Maze3View
+from end import EndView
 
 
 class Director(arcade.Window):
@@ -16,7 +18,9 @@ class Director(arcade.Window):
             MenuView,
             Chapter1View,
             Chapter2View,
-            Chapter3View
+            Chapter3View,
+            Maze3View,
+            EndView
         ]
         self.next_view()
 
@@ -28,7 +32,7 @@ class Director(arcade.Window):
 
 
 def main():
-    window = Director(settings.WIDTH, settings.HEIGHT, "CPT Structure")
+    window = Director(settings.WIDTH, settings.HEIGHT, "The A-Maze-ing Game")
     arcade.run()
 
 
