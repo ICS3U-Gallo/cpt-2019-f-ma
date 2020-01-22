@@ -118,9 +118,6 @@ class Maze3View(arcade.View):
         elif key == arcade.key.UP or key == arcade.key.DOWN:
             self.ball.change_y = 0
 
-    
-    
-
 if __name__ == "__main__":
     from utils import FakeDirector
     window = arcade.Window(settings.WIDTH, settings.HEIGHT)
