@@ -1,6 +1,3 @@
-"""
-maze 3
-"""
 import arcade
 import movement_2
 import settings
@@ -54,12 +51,16 @@ class Maze3View(arcade.View):
 
         # Create our ball
         self.ball = Ball(1080, 200, 0, 0, 15, arcade.color.BLIZZARD_BLUE)
+        self.end_ball = Ball(25, 840, 0, 0, 15, arcade.color.GREEN_YELLOW)
 
 
     def on_draw(self):
         arcade.start_render()
         self.ball.draw()
+        self.end_ball.draw()
 
+        arcade.draw_text("Press END", -25, 840,
+                         arcade.color.BLACK, font_size=35, anchor_x="center")
         arcade.draw_rectangle_filled(360, 345, 25, 480, arcade.color.BLACK_BEAN)
         arcade.draw_rectangle_filled(360, 780, 25, 200, arcade.color.BLACK_BEAN)
         arcade.draw_rectangle_filled(0, 780, 300, 25, arcade.color.BLACK_BEAN)
@@ -107,6 +108,8 @@ class Maze3View(arcade.View):
             self.ball.change_y = -MOVEMENT_SPEED
         elif key == arcade.key.DOWN:
             self.ball.change_y = MOVEMENT_SPEED
+        elif key == arcade.key.E:
+            self.director.next_view()
 
     def on_key_release(self, key, modifiers):
         """ Called whenever a user releases a key. """
@@ -114,6 +117,9 @@ class Maze3View(arcade.View):
             self.ball.change_x = 0
         elif key == arcade.key.UP or key == arcade.key.DOWN:
             self.ball.change_y = 0
+
+    
+    
 
 if __name__ == "__main__":
     from utils import FakeDirector
